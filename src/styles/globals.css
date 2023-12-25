@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  @apply transition-all;
+}
+
+.container {
+  @apply dark:bg-neutral-800 bg-neutral-500 dark:text-white text-neutral-950;
+}
+
+.btn {
+  @apply dark:bg-neutral-900 bg-neutral-200 p-2 px-7 text-xl rounded-md hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 hover:scale-110 transition-all disabled:dark:opacity-5 disabled:bg-neutral-300;
+}
+
+.surah-number {
+  width: 41px;
+  height: 48px;
+  background-image: url(https://quran.kemenag.go.id/assets/images/icons/ic-frame-number.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
