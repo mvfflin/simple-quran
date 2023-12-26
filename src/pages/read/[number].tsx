@@ -15,14 +15,18 @@ const ReadQuran = ({
   const router = useRouter();
   const [surah, setSurah] = useState<Surah | null>({});
   const [loading, setLoading] = useState<boolean>(false);
+  const [audioStatus, setAudioStatus] = useState<boolean>(false);
 
   const nextSurah = (number: number) => {
     window.location.href = `${window.location.origin}/read/${number}`;
   };
 
+  const playAudio = (boolean: boolean) => {};
+
   useEffect(() => {
     setSurah(surahMeta);
-  }, []);
+    console.log(surahMeta.audioFull["01"]);
+  }, [router.isReady, router.query.number]);
 
   return (
     <>
@@ -54,21 +58,22 @@ const ReadQuran = ({
                   <h2 className="text-xl">{surah.jumlahAyat} Ayat</h2>
 
                   <div className="mx-auto mt-5 col-3 block">
-                    <button className="btn my-2">
-                      <BiSolidSpeaker />
-                    </button>
+                    <audio controls className="mx-auto">
+                      <source src={surahMeta.audioFull["05"]} />
+                    </audio>
+
                     <br />
                     <button
                       onClick={() => nextSurah(surah?.nomor! - 1)}
                       className="btn mr-2"
-                      disabled={surah?.nomor == 1}
+                      hidden={surah?.nomor == 1}
                     >
                       <BiLeftArrowAlt />
                     </button>
                     <button
                       className="btn"
                       onClick={() => nextSurah(surah?.nomor! + 1)}
-                      disabled={surah?.nomor == 114}
+                      hidden={surah?.nomor == 114}
                     >
                       <BiRightArrowAlt />
                     </button>

@@ -3,7 +3,7 @@ import { Ayat } from "./ayat";
 export interface Surah {
   arti?: string;
   ayat?: Array<Ayat>;
-  audioFull?: Array<string>;
+  audioFull?: any;
   deskripsi?: string;
   jumlahAyat?: number;
   nama?: string;
