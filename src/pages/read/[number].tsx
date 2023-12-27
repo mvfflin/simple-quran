@@ -25,8 +25,11 @@ const ReadQuran = ({
 
   useEffect(() => {
     setSurah(surahMeta);
-    console.log(surahMeta.audioFull["01"]);
+    console.log(surahMeta);
   }, [router.isReady, router.query.number]);
+
+  const alquran_png =
+    "https://cdn.glitch.global/f05388dc-b53e-4cda-809d-b5caadf224eb/alquran.png?v=1703634404818";
 
   return (
     <>
@@ -37,10 +40,10 @@ const ReadQuran = ({
           name="og:description"
           content={`Baca surah ${surahMeta.namaLatin} di website Al-Qur\'an simple ini!`}
         />
-        <link rel="shortcut icon" href="./alquran.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./alquran.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="./alquran.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="./alquran.png" />
+        <link rel="shortcut icon" href={alquran_png} />
+        <link rel="apple-touch-icon" sizes="180x180" href={alquran_png} />
+        <link rel="icon" type="image/png" sizes="32x32" href={alquran_png} />
+        <link rel="icon" type="image/png" sizes="16x16" href={alquran_png} />
       </Head>
       <main className="mt-52">
         <div className="text-center">
@@ -56,6 +59,9 @@ const ReadQuran = ({
                     {surah?.namaLatin}
                   </h1>
                   <h2 className="text-xl">{surah.jumlahAyat} Ayat</h2>
+                  <h3 className="text-md">
+                    {surah.tempatTurun == "Mekah" ? "Makkiyah" : "Madaniyah"}
+                  </h3>
 
                   <div className="mx-auto mt-5 col-3 block">
                     <audio controls className="mx-auto">
