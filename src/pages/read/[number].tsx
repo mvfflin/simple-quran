@@ -27,7 +27,8 @@ const ReadQuran = ({
     useEffect(() => {
         setSurah(surahMeta);
         console.log(surahMeta);
-    }, [router.isReady, router.query.number, surahMeta]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [router.isReady, router.query.number]);
 
     const alquran_png =
         "https://cdn.glitch.global/f05388dc-b53e-4cda-809d-b5caadf224eb/alquran.png?v=1703634404818";
