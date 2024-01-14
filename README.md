@@ -4,11 +4,11 @@ As it's name, this is a simple al-qur'an website, with many features.
 
 ## Features
 
-- Audio every surah
+-   Audio every surah
+-   Search surah
 
 ### TODO
 
-- [ ] Audio in every verse
-- [ ] Responsive navigation bar
-- [ ] Search surah
-- [ ] others coming soon...
+-   [⭕] Audio in every verse
+-   [⭕] Responsive navigation bar
+-   [⭕] others coming soon...
