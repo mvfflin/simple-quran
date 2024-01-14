@@ -32,12 +32,16 @@ export const FullRead = () => {
 
                 console.log(
                     data.data.filter((e: any) => {
-                        return e.namaLatin?.includes(search.toString());
+                        return e.namaLatin
+                            ?.toLowerCase()
+                            .includes(search.toString().toLowerCase());
                     })
                 );
                 return setSurahs(
                     data.data.filter((e: any) => {
-                        return e.namaLatin?.includes(search.toString());
+                        return e.namaLatin
+                            ?.toLowerCase()
+                            .includes(search.toString().toLowerCase());
                     })
                 );
             } catch (error) {
