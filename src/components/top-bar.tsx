@@ -17,6 +17,12 @@ export const TopBar = () => {
     return null;
   }
 
+  const clicked = () => {
+    const menus = document.getElementById("menus");
+    menus?.classList.remove("left-0");
+    menus?.classList.add("left-full");
+  };
+
   const changeTheme = () => {
     if (theme == "dark") {
       console.log("hi");
@@ -56,13 +62,19 @@ export const TopBar = () => {
             className="absolute flex-col transition-all flex w-full bg-opacity-80 left-full dark:bg-neutral-950 dark:bg-opacity-80 bg-neutral-300 h-screen lg:bg-transparent dark:lg:bg-transparent lg:flex-row lg:left-0 lg:relative lg:inline-block lg:h-0 lg:w-auto"
           >
             <Link href="/">
-              <button className="btn m-5">Home</button>
+              <button onClick={clicked} className="btn m-5">
+                Home
+              </button>
             </Link>
             <Link href="/support">
-              <button className="btn m-5">Support</button>
+              <button onClick={clicked} className="btn m-5">
+                Support
+              </button>
             </Link>
             <Link href="/read">
-              <button className="btn m-5">Al-Quran</button>
+              <button onClick={clicked} className="btn m-5">
+                Al-Quran
+              </button>
             </Link>
           </div>
           <div className="inline-block">
