@@ -58,9 +58,9 @@ export const TopBar = () => {
             <Link href="/">
               <button className="btn m-5">Home</button>
             </Link>
-            <a>
-              <button className="btn m-5">Donate</button>
-            </a>
+            <Link href="/support">
+              <button className="btn m-5">Support</button>
+            </Link>
             <Link href="/read">
               <button className="btn m-5">Al-Quran</button>
             </Link>
