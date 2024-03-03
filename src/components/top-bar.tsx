@@ -30,11 +30,11 @@ export const TopBar = () => {
   return (
     <>
       <div className="h-[90px] w-full gap-10 backdrop-blur-lg top-0 fixed z-10 justify-center text-center flex">
-        <h1 className="text-xl md:text-3xl mt-7 ml-4 md:m-6 font-bold">
+        <h1 className="text-xl lg:text-3xl mt-7 ml-4 lg:m-6 font-bold">
           Al-Quran Website
         </h1>
         <div className="">
-          <div className="inline-block md:hidden">
+          <div className="inline-block lg:hidden">
             <button
               className="btn px-2 m-[25px]"
               onClick={() => {
@@ -53,7 +53,7 @@ export const TopBar = () => {
           </div>
           <div
             id="menus"
-            className="absolute flex-col transition-all flex w-full bg-opacity-80 left-full dark:bg-neutral-950 dark:bg-opacity-80 bg-neutral-300 h-screen md:bg-transparent dark:md:bg-transparent md:flex-row md:left-0 md:relative md:inline-block md:h-0 md:w-auto"
+            className="absolute flex-col transition-all flex w-full bg-opacity-80 left-full dark:bg-neutral-950 dark:bg-opacity-80 bg-neutral-300 h-screen lg:bg-transparent dark:lg:bg-transparent lg:flex-row lg:left-0 lg:relative lg:inline-block lg:h-0 lg:w-auto"
           >
             <Link href="/">
               <button className="btn m-5">Home</button>
@@ -67,7 +67,7 @@ export const TopBar = () => {
           </div>
           <div className="inline-block">
             <button
-              className="btn px-2 m-[25px] md:m-5 md:px-3 md:py-3"
+              className="btn px-2 m-[25px] lg:m-5 lg:px-3 lg:py-3"
               onClick={changeTheme}
             >
               {theme == "dark" ? <FaMoon /> : <FaSun />}
